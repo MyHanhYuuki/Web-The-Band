@@ -12,27 +12,51 @@ html{
 #header{
     height: 46px;
     background-color: #000;
+}
 
+#nav, .subnav{
+    list-style-type: none;
 }
 
 #nav li{
     display: inline-block;
-    line-height: 46px;
+    line-height: 38px;
     position: relative;
 }
 
 #nav li a{
     color: #fff;
     text-decoration: none;
-    padding: 0 26px;
+    padding: 0 28px;
     display: block;
+    line-height: 46px;
+}
+
+#nav > li > a{
     text-transform: uppercase;
 }
 
+#nav .nav-icon{
+    font-size: 0.7rem;
+    color: #fff;
+    padding-left: 6px;
+}
+
 #nav .subnav{
-    /* display: none; */
+    display: none;
     position: absolute;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 140px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav a{
+    line-height: 38px;
+    padding: 0 14px;
 }
 
 #nav > li:hover > a ,
