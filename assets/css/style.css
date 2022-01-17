@@ -233,7 +233,7 @@ html{
     padding: 6px 16px;
     border-bottom: 2px solid #ddd;
     text-align: left;
-    color: #757575;
+    color: #636363;
     list-style: none;
 
 }
@@ -279,17 +279,29 @@ html{
 .place-img{
     width: 100%;
     background: cover;
+    display: block;
 }
 
 .place-img:hover{
     opacity: 50%;
 }
 
-.place-heading{
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+}
 
+.place-heading{
+    font-style: bold;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .place-sub-heading{
+    font-style: italic;
+    color: rgb(129, 129, 129);
+    font-weight: 400;
+    margin: 16px 0 12px;
 
 }
 
@@ -301,6 +313,7 @@ html{
     font-weight: bold;
     background-color: #000;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 .place-btn:hover{
@@ -308,8 +321,21 @@ html{
     color: rgb(0, 0, 0);
 }
 
+
 /* Footer*/
 
 #footer{
 
+}
+
+/* Modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba( 0, 0, 0, 0.4);
+    
 }
