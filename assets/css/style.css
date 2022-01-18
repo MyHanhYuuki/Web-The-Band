@@ -337,5 +337,129 @@ html{
     left: 0;
     bottom: 0;
     background: rgba( 0, 0, 0, 0.4);
-    
+    justify-content: center;
+    align-items: center;
+    display: none;  
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 700px;
+    max-width:  calc( 100% - 32px);
+    min-height: 250px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(82, 77, 77, 0.5);
+    animation: modalFadeIn ease 0.5s;  
+}
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{ 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    font-size:  1.2rem;
+    padding: 6px 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    color: #fff;
+    background-color: rgb(202, 136, 136);
+}
+
+.modal-header{
+    background-color: rgb(223, 159, 159);
+    height: 110px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.modal-header-icon{
+    margin: 2px 14px 0 0;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.modal-body{
+    padding: 30px 0 20px 38px;
+
+}
+
+.modal-label{
+    display: block;
+    font-size: 1.2rem;
+}
+
+.modal-label-icon{
+    margin-right: 6px;
+    color:rgb(228, 152, 152);
+
+}
+
+.modal-input{
+    margin: 18px 0 26px;
+    width: calc(100% - 40px);
+    height: 30px;
+    padding-left: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    outline-color: rgb(226, 137, 137);
+}
+
+.modal-input:hover{
+    outline-color:rgb(226, 137, 137);
+}
+
+#buy-tickets{
+    width: calc(100% - 40px);
+    height: 34px;
+    background: rgb(236, 169, 169);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.modal-check-icon{
+    font-size: 0.8rem;
+    padding: 2px 0 0 6px;
+}
+
+#buy-tickets:hover{
+    background-color:rgb(228, 152, 152, 0.7);
+}
+
+.modal-footer{
+    float: right;
+    padding: 4px 40px 20px 0px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.modal-footer a{
+    text-decoration: none;
+    color: #2838c9;
+    font-weight: 400;
 }

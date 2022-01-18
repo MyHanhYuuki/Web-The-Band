@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/script.js">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
@@ -88,7 +89,7 @@
                             <div class="place-body">
                                 <p class="place-heading">Paris</p>
                                 <p class="place-sub-heading">Sunday 16 January 2022</p>
-                                <button class="place-btn">Buy Tickets</button>
+                                <button class="place-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </li>
 
@@ -97,7 +98,7 @@
                             <div class="place-body">
                                 <p class="place-heading">NewYork</p>
                                 <p class="place-sub-heading">Monday 17 January 2022</p>
-                                <button class="place-btn">Buy Tickets</button>
+                                <button class="place-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </li>
 
@@ -106,7 +107,7 @@
                             <div class="place-body">
                                 <p class="place-heading">San Francisco</p>
                                 <p class="place-sub-heading">Tuesday 18 January 2022</p>
-                                <button class="place-btn">Buy Tickets</button>
+                                <button class="place-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </li>
                       
@@ -128,34 +129,34 @@
 
         <!-- Modal -->
 
-        <div class="modal">
-            <div class="modal-container">              
-                <div class="modal-close">
-                    <i class="fas fa-times"></i>
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">              
+                <div class="modal-close js-modal-close">
+                    <i class="modal-close-icon fas fa-times"></i>
                 </div>
 
                 <header class="modal-header">
-                    <i class="modal-icon fas fa-briefcase"></i>
+                    <i class="modal-header-icon fas fa-briefcase"></i>
                     Tickets
                 </header>
 
                 <div class="modal-body">
-                    <label for="" class="modal-label">
-                        <i class="modal-icon fas fa-shopping-cart"></i>
-                        Tickets, $20 per person
+                    <label for="tickets-quantity" class="modal-label">
+                        <i class="modal-label-icon fas fa-shopping-cart"></i>
+                        Tickets, $30 per person
                     </label> 
-                    <input type="text" class="modal-input" placeholder="How many?">
+                    <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
                     
-                    <label for="" class="modal-label">
-                        <i class="modal-icon fas fa-user"></i>
+                    <label for="tickets-email" class="modal-label">
+                        <i class="modal-label-icon fas fa-user"></i>
                         Send To
                     </label> 
-                    <input type="text" class="modal-input" placeholder="Enter Email...">
+                    <input id="tickets-email"type="text" class="modal-input" placeholder="Enter email...">
                     
-                    <button id="buy-tickets">
+                    <div id="buy-tickets">
                         Pay
-                        <i class="fas fa-check"></i>
-                    </button>
+                        <i class="modal-check-icon fas fa-check"></i>
+                    </div>
                 </div>
 
                 <footer class="modal-footer">
@@ -166,6 +167,34 @@
 
         </div>
     </div>
-    
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+        
+        function showBuyTickets() {
+        modal.classList.add('open')
+        }
+        
+        function hideBuyTickets() {
+        modal.classList.remove('open')
+        }
+        
+        for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyTickets)   
+        }
+        
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        modal.addEventListener('click', hideBuyTickets)
+
+        modalContainer.addEventListener('click', function (event){
+            event.stopPropagation()
+        })
+
+        </script>
+        
 </body>
 </html>
