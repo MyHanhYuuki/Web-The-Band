@@ -9,8 +9,30 @@ html{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.col-3{
+    width: calc(100% / 3);
+}
+
+.col-2{
+    width: 50%;
+}
+
 .text-white{
     color: #fff !important;
+}
+
+.text-center{
+    text-align: center;
 }
 
 #header{
@@ -181,13 +203,7 @@ html{
     margin-top: 48px;
     display: flex;
 }
-
 /* Dung display: flex; or float: left; */
-#content .member-item{
-    /* float: left; */
-    text-align: center;
-    width: calc(100% / 3);  
-}
 
 #content .member-name{
     font-size: 1.2rem;
@@ -265,16 +281,14 @@ html{
 
 .place-list{
     display: flex;
-    margin: 0 -8px;
     list-style: none;
-
 }
 
-.place-items{
+/* .place-items{
     width: calc(100% / 3);
     padding: 0 8px;
 
-}
+} */
 
 .place-img{
     width: 100%;
@@ -319,13 +333,6 @@ html{
 .place-btn:hover{
     background-color: rgb(206, 203, 203);
     color: rgb(0, 0, 0);
-}
-
-
-/* Footer*/
-
-#footer{
-
 }
 
 /* Modal */
@@ -462,4 +469,12 @@ html{
     text-decoration: none;
     color: #2838c9;
     font-weight: 400;
+}
+
+/* Contact */
+
+/* Footer*/
+
+#footer{
+
 }
