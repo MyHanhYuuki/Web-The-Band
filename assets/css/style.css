@@ -12,6 +12,7 @@ html{
 .row{
     margin-left: -8px;
     margin-right: -8px;
+    display: flex;
 }
 
 .col{
@@ -19,12 +20,16 @@ html{
     margin-right: 8px;
 }
 
+.col-2{
+    width: 50%;
+}
+
 .col-3{
     width: calc(100% / 3);
 }
 
-.col-2{
-    width: 50%;
+.col-full{
+    width: 100%;
 }
 
 .text-white{
@@ -472,6 +477,45 @@ html{
 }
 
 /* Contact */
+
+.contact-content{
+    margin-top: 40px;
+
+}
+
+.contact-info {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+
+}
+
+.contact-info i[class*="fas"] {
+    width: 40px;
+    display: inline-block;
+    color:rgb(224, 153, 153);
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.form-control{
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    outline-color: rgb(224, 153, 153);
+    width: 100%;
+}
+
+.contact-form .form-submit-btn{
+    background-color:#000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;   
+}
 
 /* Footer*/
 
